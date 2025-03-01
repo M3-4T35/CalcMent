@@ -59,6 +59,7 @@ CalcMent/
 ## Améliorations Futures
 
 * plusieurs niveaux de difficulté 
+* score basé sur le temps et difficulté 
 * plusieurs opérations autres que la multiplication
 * système de highscore stocké localement
 * style plus personnalisé
