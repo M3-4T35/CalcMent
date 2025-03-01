@@ -1,6 +1,7 @@
 import { Link } from 'expo-router';
 import { View, Text, StyleSheet } from 'react-native';
 
+// Composant de l'écran d'accueil
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
@@ -12,6 +13,7 @@ export default function HomeScreen() {
   );
 }
 
+// Styles CSS
 const styles = StyleSheet.create({
   container: {
     flex: 1,

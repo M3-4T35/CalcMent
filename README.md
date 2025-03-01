@@ -1,50 +1,64 @@
-# Welcome to your Expo app 👋
+# CalcMent
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Introduction
 
-## Get started
+CalcMent est une application mobile développée avec Expo et TypeScript. Elle vise à aider les utilisateurs à améliorer leurs compétences en calcul mental en leur proposant des opérations à résoudre.
 
-1. Install dependencies
+## Objectifs
 
-   ```bash
-   npm install
-   ```
+* Fournir une interface simple et intuitive pour pratiquer le calcul mental.
+* Générer des opérations aléatoires entre deux nombres avec plusieurs niveaux de difficulté.
+* Permettre à l'utilisateur de vérifier sa réponse et d'afficher un feedback immédiat.
+* Maintenir un score pour motiver l'utilisateur à s'améliorer avec un système de highscore.
+* Avoir le choix entre le français et l'anglais pour le langage de l'application
 
-2. Start the app
+## Fonctionnalités actuelles
 
-   ```bash
-    npx expo start
-   ```
+### Page d'acceuil
 
-In the output, you'll find options to open the app in a
+* Affiche le titre du jeu
+* Contient le bouton jouer
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Page de jeu
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+* Génère deux nombres aléatoires
+* Affiche l'opération à résoudre
+* Fournit un champ de texte pour que l'utilisateur entre sa réponse.
+* Met à jour le score en fonction des réponses correctes.
+* Génère une nouvelle addition après chaque réponse.
 
-## Get a fresh project
+## Structure du Projet
 
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+CalcMent/
+├── app/
+│   ├── index.tsx          # Page d'accueil
+│   ├── game.tsx           # Page de jeu
+│   └── _layout.tsx        # Layout global (optionnel)
+├── components/            # Composants réutilisables
+├── assets/                # Assets (images, polices, etc.)
+├── app.json               # Configuration Expo
+└── package.json
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Description des fichiers
+* ``app/index.tsx`` : Page d'accueil avec un bouton pour démarrer le jeu.
+* ``app/game.tsx`` : Page de jeu où les additions sont générées et résolues
+* ``app/_layout.tsx`` : Layout global
+* ``components/`` : Dossier pour les composants
+* ``assets/`` : Dossier pour les images, polices, etc.
 
-## Learn more
+## Technologies Utilisées
 
-To learn more about developing your project with Expo, look at the following resources:
+* Expo : Framework pour développer des applications React Native.
+* TypeScript : Langage de programmation pour ajouter des types à JavaScript.
+* Expo Router : Système de navigation basé sur le dossier app/.
+* React Native : Bibliothèque pour construire des interfaces utilisateur natives.
+* React Navigation : Gestion de la navigation entre les écrans.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Améliorations Futures
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+* plusieurs niveaux de difficulté 
+* plusieurs opérations autres que la multiplication
+* système de highscore stocké localement
+* style plus personnalisé
